@@ -1,11 +1,11 @@
 package com.igorwojda.showcase.feature.album.presentation.pogslist
 
 import androidx.lifecycle.viewModelScope
-import com.igorwojda.showcase.base.presentation.viewmodel.BaseAction
-import com.igorwojda.showcase.base.presentation.viewmodel.BaseViewModel
-import com.igorwojda.showcase.base.presentation.viewmodel.BaseViewState
 import com.igorwojda.showcase.feature.album.domain.model.PogDomainModel
 import com.igorwojda.showcase.feature.album.domain.usecase.GetPogListUseCase
+import com.igorwojda.showcase.library.base.presentation.viewmodel.BaseAction
+import com.igorwojda.showcase.library.base.presentation.viewmodel.BaseViewModel
+import com.igorwojda.showcase.library.base.presentation.viewmodel.BaseViewState
 import kotlinx.coroutines.launch
 
 internal class PogListViewModel(
