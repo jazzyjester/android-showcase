@@ -2,13 +2,13 @@ package com.igorwojda.showcase.feature.album.presentation
 
 import androidx.fragment.app.Fragment
 import coil.ImageLoader
-import com.igorwojda.showcase.base.di.KotlinViewModelProvider
 import com.igorwojda.showcase.feature.album.FEATURE_NAME
 import com.igorwojda.showcase.feature.album.presentation.albumdetail.AlbumDetailViewModel
 import com.igorwojda.showcase.feature.album.presentation.albumlist.AlbumListViewModel
 import com.igorwojda.showcase.feature.album.presentation.albumlist.recyclerview.AlbumAdapter
 import com.igorwojda.showcase.feature.album.presentation.pogslist.PogListViewModel
 import com.igorwojda.showcase.feature.album.presentation.pogslist.recyclerview.PogsAdapter
+import com.igorwojda.showcase.library.base.di.KotlinViewModelProvider
 import org.kodein.di.Kodein
 import org.kodein.di.android.x.AndroidLifecycleScope
 import org.kodein.di.generic.bind
