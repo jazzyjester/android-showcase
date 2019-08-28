@@ -1,0 +1,20 @@
+{
+  "series": [
+    {
+      "name": "Red series",
+      "index": 1
+    },
+    {
+      "name": "Green series",
+      "index": 31
+    },
+    {
+      "name": "Blue series",
+      "index": 61
+    },
+    {
+      "name": "Purple series",
+      "index": 91
+    }
+  ]
+}

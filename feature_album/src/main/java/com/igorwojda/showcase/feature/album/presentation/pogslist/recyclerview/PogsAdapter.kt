@@ -1,4 +1,4 @@
-package com.igorwojda.showcase.feature.album.presentation.albumlist.recyclerview
+package com.igorwojda.showcase.feature.album.presentation.pogslist.recyclerview
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,18 +9,18 @@ import coil.transform.RoundedCornersTransformation
 import com.igorwojda.showcase.base.delegate.observer
 import com.igorwojda.showcase.base.presentation.extension.setOnDebouncedClickListener
 import com.igorwojda.showcase.feature.album.R
-import com.igorwojda.showcase.feature.album.domain.model.AlbumDomainModel
+import com.igorwojda.showcase.feature.album.domain.model.PogDomainModel
 import com.pawegio.kandroid.hide
 import com.pawegio.kandroid.show
 import kotlinx.android.synthetic.main.fragment_album_list_item.view.*
 
-internal class AlbumAdapter : RecyclerView.Adapter<AlbumAdapter.MyViewHolder>() {
+internal class PogsAdapter : RecyclerView.Adapter<PogsAdapter.MyViewHolder>() {
 
-    var albums: List<AlbumDomainModel> by observer(listOf()) {
+    var pogList: List<PogDomainModel> by observer(listOf()) {
         notifyDataSetChanged()
     }
 
-    private var onDebouncedClickListener: ((album: AlbumDomainModel) -> Unit)? = null
+    private var onDebouncedClickListener: ((pog: PogDomainModel) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.fragment_album_list_item, parent, false)
@@ -28,12 +28,12 @@ internal class AlbumAdapter : RecyclerView.Adapter<AlbumAdapter.MyViewHolder>() 
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.bind(albums[position], position)
+        holder.bind(pogList[position], position)
     }
 
-    override fun getItemCount(): Int = albums.size
+    override fun getItemCount(): Int = pogList.size
 
-    fun setOnDebouncedClickListener(listener: (album: AlbumDomainModel) -> Unit) {
+    fun setOnDebouncedClickListener(listener: (pog: PogDomainModel) -> Unit) {
         this.onDebouncedClickListener = listener
     }
 
@@ -56,13 +56,13 @@ internal class AlbumAdapter : RecyclerView.Adapter<AlbumAdapter.MyViewHolder>() 
         }
 
         fun bind(
-            albumDomainModel: AlbumDomainModel,
+            pogDomainModel: PogDomainModel,
             position: Int
         ) {
-            itemView.setOnDebouncedClickListener { onDebouncedClickListener?.invoke(albumDomainModel) }
-            url = albumDomainModel.getDefaultImageUrl()
-//            val pogNumber = position.toString().padStart(4, '0')
-//            url = "https://pogim.net/images/pogs/pog_$pogNumber.jpg"
+            itemView.setOnDebouncedClickListener { onDebouncedClickListener?.invoke(pogDomainModel) }
+//            url = albumDomainModel.getDefaultImageUrl()
+            val pogNumber = pogDomainModel.index.toString().padStart(4, '0')
+            url = "https://pogim.net/images/pogs/pog_$pogNumber.jpg"
 
         }
 

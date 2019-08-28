@@ -1,32 +1,31 @@
-package com.igorwojda.showcase.feature.album.presentation.albumlist
+package com.igorwojda.showcase.feature.album.presentation.pogslist
 
 import android.os.Bundle
 import android.view.View
-import androidx.navigation.fragment.findNavController
 import com.igorwojda.showcase.base.presentation.extension.observe
 import com.igorwojda.showcase.base.presentation.fragment.BaseContainerFragment
 import com.igorwojda.showcase.feature.album.R
-import com.igorwojda.showcase.feature.album.presentation.albumlist.recyclerview.AlbumAdapter
 import com.igorwojda.showcase.feature.album.presentation.albumlist.recyclerview.GridAutofitLayoutManager
+import com.igorwojda.showcase.feature.album.presentation.pogslist.recyclerview.PogsAdapter
 import com.pawegio.kandroid.visible
 import kotlinx.android.synthetic.main.fragment_album_list.*
 import org.kodein.di.generic.instance
 
-class AlbumListFragment : BaseContainerFragment() {
+class PogListFragment : BaseContainerFragment() {
 
-    private val viewModel: AlbumListViewModel by instance()
+    private val viewModel: PogListViewModel by instance()
 
     override val layoutResourceId = R.layout.fragment_album_list
 
-    private val albumAdapter: AlbumAdapter by instance()
+    private val pogAdapter: PogsAdapter by instance()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         val context = checkNotNull(context)
 
-        albumAdapter.setOnDebouncedClickListener {
-//            val navDirections = AlbumListFragmentDirections.actionAlbumListToAlbumDetail(it.artist, it.name, it.mbId)
+        pogAdapter.setOnDebouncedClickListener {
+            //            val navDirections = AlbumListFragmentDirections.actionAlbumListToAlbumDetail(it.artist, it.name, it.mbId)
 //            findNavController().navigate(navDirections)
         }
 
@@ -38,15 +37,15 @@ class AlbumListFragment : BaseContainerFragment() {
                     context,
                     columnWidth
                 )
-            adapter = albumAdapter
+            adapter = pogAdapter
         }
 
         observe(viewModel.stateLiveData, ::onStateChange)
         viewModel.loadData()
     }
 
-    private fun onStateChange(state: AlbumListViewModel.ViewState) {
-        albumAdapter.albums = state.albums
+    private fun onStateChange(state: PogListViewModel.ViewState) {
+        pogAdapter.pogList = state.pogList
         progressBar.visible = state.isLoading
         errorAnimation.visible = state.isError
     }

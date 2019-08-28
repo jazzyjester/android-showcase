@@ -10,6 +10,8 @@ internal class GetAlbumListUseCase(
         // Due to API limitations we have to perform search with custom phrase to get albums
         val phrase = "sd"
 
+        val pogSeriesList = albumRepository.getPogSeriesList()
+
         return albumRepository.searchAlbum(phrase)
             .filter { it.getDefaultImageUrl() != null }
     }

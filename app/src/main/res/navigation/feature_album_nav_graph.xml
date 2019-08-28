@@ -3,27 +3,38 @@
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/album_nav_graph"
             app:startDestination="@+id/albumListFragment">
-    <fragment
+    <!--<fragment
         android:id="@+id/albumListFragment"
         android:name="com.igorwojda.showcase.feature.album.presentation.albumlist.AlbumListFragment"
         android:label="AlbumListFragment">
         <action
             android:id="@+id/action_album_list_to_albumDetail"
             app:destination="@id/Fragment"/>
-    </fragment>
+    </fragment><-->
+
     <fragment
-        android:id="@+id/Fragment"
-        android:name="com.igorwojda.showcase.feature.album.presentation.albumdetail.AlbumDetailFragment"
-        android:label="AlbumDetailFragment">
+            android:id="@+id/albumListFragment"
+            android:name="com.igorwojda.showcase.feature.album.presentation.pogslist.PogListFragment"
+            android:label="AlbumListFragment">
+        <action
+                android:id="@+id/action_album_list_to_albumDetail"
+                app:destination="@id/Fragment"/>
+    </fragment>
+
+
+    <fragment
+            android:id="@+id/Fragment"
+            android:name="com.igorwojda.showcase.feature.album.presentation.albumdetail.AlbumDetailFragment"
+            android:label="AlbumDetailFragment">
         <argument
-            android:name="artistName"
-            app:argType="string"/>
+                android:name="artistName"
+                app:argType="string"/>
         <argument
-            android:name="albumName"
-            app:argType="string"/>
+                android:name="albumName"
+                app:argType="string"/>
         <argument
-            android:name="mbId"
-            app:argType="string"
-            app:nullable="true"/>
+                android:name="mbId"
+                app:argType="string"
+                app:nullable="true"/>
     </fragment>
 </navigation>
