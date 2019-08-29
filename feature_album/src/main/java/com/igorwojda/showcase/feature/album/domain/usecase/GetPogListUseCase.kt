@@ -1,10 +1,12 @@
 package com.igorwojda.showcase.feature.album.domain.usecase
 
+import android.content.Context
 import com.igorwojda.showcase.feature.album.domain.model.PogDomainModel
 import com.igorwojda.showcase.feature.album.domain.repository.AlbumRepository
 
 internal class GetPogListUseCase(
-    private val albumRepository: AlbumRepository
+    private val albumRepository: AlbumRepository,
+    private val context: Context
 ) {
     suspend fun execute(): List<PogDomainModel> {
         val pogSeriesList = albumRepository.getPogSeriesList()

@@ -6,13 +6,14 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.api.load
 import coil.transform.RoundedCornersTransformation
-import com.igorwojda.showcase.library.base.delegate.observer
-import com.igorwojda.showcase.library.base.presentation.extension.setOnDebouncedClickListener
 import com.igorwojda.showcase.feature.album.R
 import com.igorwojda.showcase.feature.album.domain.model.PogDomainModel
+import com.igorwojda.showcase.library.base.delegate.observer
+import com.igorwojda.showcase.library.base.presentation.extension.setOnDebouncedClickListener
 import com.pawegio.kandroid.hide
 import com.pawegio.kandroid.show
 import kotlinx.android.synthetic.main.fragment_album_list_item.view.*
+import timber.log.Timber
 
 internal class PogsAdapter : RecyclerView.Adapter<PogsAdapter.MyViewHolder>() {
 
@@ -28,7 +29,7 @@ internal class PogsAdapter : RecyclerView.Adapter<PogsAdapter.MyViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.bind(pogList[position], position)
+        holder.bind(pogList[position])
     }
 
     override fun getItemCount(): Int = pogList.size
@@ -41,6 +42,7 @@ internal class PogsAdapter : RecyclerView.Adapter<PogsAdapter.MyViewHolder>() {
         itemView: View
     ) : RecyclerView.ViewHolder(itemView) {
 
+        private val context = itemView.context
         private var url by observer<String?>(null) {
             itemView.coverErrorImageView.hide()
 
@@ -55,14 +57,20 @@ internal class PogsAdapter : RecyclerView.Adapter<PogsAdapter.MyViewHolder>() {
             }
         }
 
-        fun bind(
-            pogDomainModel: PogDomainModel,
-            position: Int
-        ) {
+        private var backgroundResourceName by observer<String?>(null) {
+            if (it != null) {
+                val identifier = context.resources.getIdentifier(it, "drawable", context.packageName)
+                itemView.rectangleBackground.setBackgroundResource(identifier)
+            }
+        }
+
+        fun bind(pogDomainModel: PogDomainModel) {
             itemView.setOnDebouncedClickListener { onDebouncedClickListener?.invoke(pogDomainModel) }
 //            url = albumDomainModel.getDefaultImageUrl()
             val pogNumber = pogDomainModel.index.toString().padStart(4, '0')
             url = "https://pogim.net/images/pogs/pog_$pogNumber.jpg"
+
+            backgroundResourceName = pogDomainModel.series.backgroundResourceName
 
         }
 

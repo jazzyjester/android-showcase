@@ -37,6 +37,7 @@ class PogListFragment : BaseContainerFragment() {
                     context,
                     columnWidth
                 )
+
             adapter = pogAdapter
         }
 

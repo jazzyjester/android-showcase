@@ -6,4 +6,34 @@
 
     <color name="iconColor">@color/white</color>
     <color name="textColor">@color/white</color>
+
+    <color name="pog_red">#ffe53922</color>
+    <color name="pog_green">#ff029542</color>
+    <color name="pog_blue">#ff01a2b6</color>
+    <color name="pog_purple">#ff8b68a9</color>
+    <color name="pog_orange">#fff8612a</color>
+    <color name="pog_pink">#fff40e91</color>
+    <color name="pog_poalim">#ffebc14a</color>
+    <color name="pog_brown">#ffac4d29</color>
+    <color name="pog_black">#ff222222</color>
+    <color name="pog_gray">#ff636459</color>
+    <color name="pog_cyan">#ff009674</color>
+    <color name="pog_psycho_blue">#ff1d2278</color>
+    <color name="pog_psycho_blue_white">#ff279eb0</color>
+    <color name="pog_gold1">#ffbf9b30</color>
+    <color name="pog_gold2">#ffffcf40</color>
+    <color name="pog_gold3">#ffbf9b30</color>
+    <color name="pog_dominos1">#fff9edcc</color>
+    <color name="pog_dominos2">#ff107da4</color>
+    <color name="pog_dominos3">#ffe3272a</color>
+    <color name="pog_comedy_red">#ffd90021</color>
+    <color name="pog_comedy_yellow">#fff7d840</color>
+    <color name="pog_mutrafim">#ff80752b</color>
+    <color name="pog_boshido_green">#ff007c3d</color>
+    <color name="pog_boshido_pink">#ffd42a73</color>
+    <color name="pog_yellow_road">#fff1b137</color>
+    <color name="pog_horospog1">#ffea3835</color>
+    <color name="pog_horospog2">#ffeeefff</color>
+    <color name="pog_hologram">#fff7eede</color>
+
 </resources>

@@ -7,7 +7,7 @@
     <string name="feature_profile">feature profile</string>
 
     <!--Bottom menu-->
-    <string name="albums">Albums</string>
+    <string name="albums">Pogs</string>
     <string name="favorites">Favorites</string>
     <string name="profile">Profile</string>
 </resources>

@@ -2,19 +2,108 @@
   "series": [
     {
       "name": "Red series",
-      "index": 1
+      "index": 1,
+      "background": "ic_rectangle_red"
     },
     {
       "name": "Green series",
-      "index": 31
+      "index": 31,
+      "background": "ic_rectangle_green"
     },
     {
       "name": "Blue series",
-      "index": 61
+      "index": 61,
+      "background": "ic_rectangle_blue"
     },
     {
       "name": "Purple series",
-      "index": 91
+      "index": 91,
+      "background": "ic_rectangle_purple"
+    },
+    {
+      "name": "Orange series",
+      "index": 121,
+      "background": "ic_rectangle_orange"
+    },
+    {
+      "name": "Pink series",
+      "index": 151,
+      "background": "ic_rectangle_pink"
+    },
+    {
+      "name": "Yellow hapoalim series",
+      "index": 181,
+      "background": "ic_rectangle_yellow_hapoalim"
+    },
+    {
+      "name": "Brown series",
+      "index": 211,
+      "background": "ic_rectangle_brown"
+    },
+    {
+      "name": "Black series",
+      "index": 241,
+      "background": "ic_rectangle_black"
+    },
+    {
+      "name": "Gray series",
+      "index": 271
+    },
+    {
+      "name": "Cyan series",
+      "index": 301
+    },
+    {
+      "name": "Blue Psycho series",
+      "index": 331
+    },
+    {
+      "name": "Gold series",
+      "index": 361
+    },
+    {
+      "name": "Domino's series",
+      "index": 391
+    },
+    {
+      "name": "Comedy red series",
+      "index": 451
+    },
+    {
+      "name": "Comedy yellow series",
+      "index": 481
+    },
+    {
+      "name": "Blue white Psycho series",
+      "index": 511
+    },
+    {
+      "name": "Hologram series",
+      "index": 601
+    },
+    {
+      "name": "Mutrafim series",
+      "index": 631
+    },
+    {
+      "name": "Boshido pink series",
+      "index": 721
+    },
+    {
+      "name": "Boshido green series",
+      "index": 751
+    },
+    {
+      "name": "Animals series",
+      "index": 781
+    },
+    {
+      "name": "Yellow road series",
+      "index": 811
+    },
+    {
+      "name": "Horospog series",
+      "index": 1001
     }
   ]
 }

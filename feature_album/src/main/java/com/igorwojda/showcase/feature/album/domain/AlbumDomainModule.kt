@@ -13,7 +13,7 @@ internal val domainModule = Kodein.Module("${FEATURE_NAME}DomainModule") {
 
     bind() from singleton { GetAlbumListUseCase(instance()) }
 
-    bind() from singleton { GetPogListUseCase(instance()) }
+    bind() from singleton { GetPogListUseCase(instance(),instance()) }
 
     bind() from singleton { GetAlbumUseCase(instance()) }
 }
