@@ -53,12 +53,15 @@ internal class PogsAdapter : RecyclerView.Adapter<PogsAdapter.MyViewHolder>() {
                 }
             }
         }
-
         private var backgroundResourceName by observer<String?>(null) {
             if (it != null) {
                 val identifier = context.resources.getIdentifier(it, "drawable", context.packageName)
                 itemView.rectangleBackground.setBackgroundResource(identifier)
             }
+        }
+
+        private var pogNumberView by observer(0){
+            itemView.pogNumber.text = it.toString()
         }
 
         fun bind(pogDomainModel: PogDomainModel) {
@@ -68,6 +71,7 @@ internal class PogsAdapter : RecyclerView.Adapter<PogsAdapter.MyViewHolder>() {
             url = "https://pogim.net/images/pogs/pog_$pogNumber.jpg"
 
             backgroundResourceName = pogDomainModel.series.backgroundResourceName
+            pogNumberView = pogDomainModel.index
 
         }
 

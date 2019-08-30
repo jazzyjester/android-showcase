@@ -32,6 +32,17 @@
                 android:padding="4dp"
                 android:id="@+id/coverImageView"/>
 
+        <TextView
+                android:id="@+id/pogNumber"
+                android:textStyle="bold"
+                android:layout_marginStart="6dp"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
         <!--
         <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="48dp"
