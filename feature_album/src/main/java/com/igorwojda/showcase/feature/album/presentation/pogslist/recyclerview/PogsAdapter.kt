@@ -10,10 +10,7 @@ import com.igorwojda.showcase.feature.album.R
 import com.igorwojda.showcase.feature.album.domain.model.PogDomainModel
 import com.igorwojda.showcase.library.base.delegate.observer
 import com.igorwojda.showcase.library.base.presentation.extension.setOnDebouncedClickListener
-import com.pawegio.kandroid.hide
-import com.pawegio.kandroid.show
 import kotlinx.android.synthetic.main.fragment_album_list_item.view.*
-import timber.log.Timber
 
 internal class PogsAdapter : RecyclerView.Adapter<PogsAdapter.MyViewHolder>() {
 
@@ -44,14 +41,14 @@ internal class PogsAdapter : RecyclerView.Adapter<PogsAdapter.MyViewHolder>() {
 
         private val context = itemView.context
         private var url by observer<String?>(null) {
-            itemView.coverErrorImageView.hide()
+            //            itemView.coverErrorImageView.hide()
 
             if (it == null) {
                 setDefaultImage()
             } else {
                 itemView.coverImageView.load(it) {
-                    crossfade(true)
-                    error(R.drawable.ic_image)
+                    //                    crossfade(true)
+                    error(R.drawable.ic_missing)
                     transformations(RoundedCornersTransformation(10F))
                 }
             }
@@ -75,7 +72,7 @@ internal class PogsAdapter : RecyclerView.Adapter<PogsAdapter.MyViewHolder>() {
         }
 
         private fun setDefaultImage() {
-            itemView.coverErrorImageView.show()
+//            itemView.coverErrorImageView.show()
         }
     }
 }

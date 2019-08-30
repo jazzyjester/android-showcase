@@ -47,63 +47,78 @@
     },
     {
       "name": "Gray series",
-      "index": 271
+      "index": 271,
+      "background": "ic_rectangle_gray"
     },
     {
       "name": "Cyan series",
-      "index": 301
+      "index": 301,
+      "background": "ic_rectangle_cyan"
     },
     {
       "name": "Blue Psycho series",
-      "index": 331
+      "index": 331,
+      "background": "ic_rectangle_psycho_blue"
     },
     {
       "name": "Gold series",
-      "index": 361
+      "index": 361,
+      "background": "ic_rectangle_gold"
     },
     {
       "name": "Domino's series",
-      "index": 391
+      "index": 391,
+      "background": "ic_rectangle_dominos"
     },
     {
       "name": "Comedy red series",
-      "index": 451
+      "index": 451,
+      "background": "ic_rectangle_comedy_red"
     },
     {
       "name": "Comedy yellow series",
-      "index": 481
+      "index": 481,
+      "background": "ic_rectangle_comedy_yellow"
     },
     {
       "name": "Blue white Psycho series",
-      "index": 511
+      "index": 511,
+      "background": "ic_rectangle_psycho_blue_white"
     },
     {
       "name": "Hologram series",
-      "index": 601
+      "index": 601,
+      "background": "ic_rectangle_hologram"
     },
     {
       "name": "Mutrafim series",
-      "index": 631
+      "index": 631,
+      "background": "ic_rectangle_mutrafim"
     },
     {
       "name": "Boshido pink series",
-      "index": 721
+      "index": 721,
+      "background" : "ic_rectangle_boshido_pink"
     },
     {
       "name": "Boshido green series",
-      "index": 751
+      "index": 751,
+      "background" : "ic_rectangle_boshido_green"
     },
     {
       "name": "Animals series",
-      "index": 781
+      "index": 781,
+      "background": "ic_rectangle_yellow"
     },
     {
       "name": "Yellow road series",
-      "index": 811
+      "index": 811,
+      "background": "ic_rectangle_yellow"
     },
     {
       "name": "Horospog series",
-      "index": 1001
+      "index": 1001,
+      "background": "ic_rectangle_horospog"
     }
   ]
 }

@@ -14,7 +14,7 @@
             android:layout_width="@dimen/image_size"
             android:layout_height="@dimen/image_size"
             app:cardCornerRadius="8dp"
-            app:cardBackgroundColor="#24282B"
+            app:cardBackgroundColor="#ffffff"
             android:layout_margin="8dp"
             app:cardElevation="0dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -32,6 +32,7 @@
                 android:padding="4dp"
                 android:id="@+id/coverImageView"/>
 
+        <!--
         <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
@@ -41,6 +42,7 @@
                 android:layout_gravity="center"
                 android:id="@+id/coverErrorImageView"
                 android:visibility="gone"/>
+                -->
 
     </com.google.android.material.card.MaterialCardView>
 

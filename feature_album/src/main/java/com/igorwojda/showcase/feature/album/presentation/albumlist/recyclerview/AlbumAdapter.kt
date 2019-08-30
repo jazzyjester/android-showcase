@@ -42,7 +42,7 @@ internal class AlbumAdapter : RecyclerView.Adapter<AlbumAdapter.MyViewHolder>() 
     ) : RecyclerView.ViewHolder(itemView) {
 
         private var url by observer<String?>(null) {
-            itemView.coverErrorImageView.hide()
+//            itemView.coverErrorImageView.hide()
 
             if (it == null) {
                 setDefaultImage()
@@ -67,7 +67,7 @@ internal class AlbumAdapter : RecyclerView.Adapter<AlbumAdapter.MyViewHolder>() 
         }
 
         private fun setDefaultImage() {
-            itemView.coverErrorImageView.show()
+//            itemView.coverErrorImageView.show()
         }
     }
 }
