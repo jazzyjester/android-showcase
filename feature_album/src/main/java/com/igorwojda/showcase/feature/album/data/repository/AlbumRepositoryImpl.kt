@@ -27,7 +27,6 @@ internal class AlbumRepositoryImpl(
     override suspend fun getAlbumInfo(artistName: String, albumName: String, mbId: String?) =
         albumRetrofitService.getAlbumInfoAsync(artistName, albumName, mbId)
             ?.album
-            ?.let { it }
             ?.toDomainModel()
 
     override suspend fun searchAlbum(phrase: String) =
